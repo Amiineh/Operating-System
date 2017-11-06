@@ -1,0 +1,50 @@
+W/art     ( 3513): 7f8e68a72000-7f8e68abc000 r-xp 00000000 08:01 1237683                    /system/lib64/libbinder.so
+W/art     ( 3513): 7f8e68abc000-7f8e68ac9000 r--p 00049000 08:01 1237683                    /system/lib64/libbinder.so
+W/art     ( 3513): 7f8e68ac9000-7f8e68aca000 rw-p 00056000 08:01 1237683                    /system/lib64/libbinder.so
+W/art     ( 3513): 7f8e68aca000-7f8e68ad4000 r-xp 00000000 08:01 1237762                    /system/lib64/liblog.so
+W/art     ( 3513): 7f8e68ad4000-7f8e68ad5000 r--p 00009000 08:01 1237762                    /system/lib64/liblog.so
+W/art     ( 3513): 7f8e68ad5000-7f8e68ad6000 rw-p 0000a000 08:01 1237762                    /system/lib64/liblog.so
+W/art     ( 3513): 7f8e68ad6000-7f8e68afb000 r-xp 00000000 08:01 1237863                    /system/lib64/libutils.so
+W/art     ( 3513): 7f8e68afb000-7f8e68afd000 r--p 00024000 08:01 1237863                    /system/lib64/libutils.so
+W/art     ( 3513): 7f8e68afd000-7f8e68afe000 rw-p 00026000 08:01 1237863                    /system/lib64/libutils.so
+W/art     ( 3513): 7f8e68afe000-7f8e68b16000 r-xp 00000000 08:01 1237700                    /system/lib64/libcutils.so
+W/art     ( 3513): 7f8e68b16000-7f8e68b17000 ---p 00000000 00:00 0 
+W/art     ( 3513): 7f8e68b17000-7f8e68b18000 r--p 00018000 08:01 1237700                    /system/lib64/libcutils.so
+W/art     ( 3513): 7f8e68b18000-7f8e68b19000 rw-p 00019000 08:01 1237700                    /system/lib64/libcutils.so
+W/art     ( 3513): 7f8e68b19000-7f8e68b1a000 rw-p 00000000 00:00 0                          [anon:linker_alloc_vector]
+W/art     ( 3513): 7f8e68b1a000-7f8e68b1b000 r--p 00000000 00:00 0                          [anon:linker_alloc]
+W/art     ( 3513): 7f8e68b1b000-7f8e68b1c000 rw-p 00000000 00:00 0                          [anon:linker_alloc]
+W/art     ( 3513): 7f8e68b1c000-7f8e68b1f000 r--p 00000000 00:00 0                          [anon:linker_alloc]
+W/art     ( 3513): 7f8e68b1f000-7f8e68b20000 r--p 00000000 00:00 0                          [anon:linker_alloc]
+W/art     ( 3513): 7f8e68b20000-7f8e68b21000 rw-p 00000000 00:00 0                          [anon:linker_alloc]
+W/art     ( 3513): 7f8e68b21000-7f8e68b22000 r--p 00000000 00:00 0                          [anon:linker_alloc]
+W/art     ( 3513): 7f8e68b22000-7f8e68b23000 rw-p 00000000 00:00 0                          [anon:linker_alloc_64]
+W/art     ( 3513): 7f8e68b23000-7f8e68b24000 r--p 00000000 00:00 0                          [anon:linker_alloc]
+D/ICU     ( 3513): No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+W/        ( 3513): Failed to bind-mount /system/lib64/x86_64/cpuinfo as /proc/cpuinfo: No such file or directory
+W/        ( 3513): Cannot create code cache directory ./code_cache: Read-only file system.
+W/libnb   ( 3513): Native bridge is disabled
+E/memtrack( 3513): Couldn't load memtrack module (No such file or directory)
+E/android.os.Debug( 3513): failed to load memtrack module: -2
+I/Radio-JNI( 3513): register_android_hardware_Radio DONE
+D/AndroidRuntime( 3513): Calling main entry com.android.commands.am.Am
+D/AndroidRuntime( 3513): Shutting down VM
+W/ViewRootImpl( 1867): Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=67.707726, y[0]=130.3286, toolType[0]=TOOL_TYPE_MOUSE, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1577143, downTime=1576503, deviceId=2, source=0x2002 }
+W/ViewRootImpl( 1867): Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=67.707726, y[0]=130.3286, toolType[0]=TOOL_TYPE_MOUSE, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1577143, downTime=1576503, deviceId=2, source=0x2002 }
+W/ViewRootImpl( 1867): Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=67.707726, y[0]=130.3286, toolType[0]=TOOL_TYPE_MOUSE, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1577143, downTime=1576503, deviceId=2, source=0x2002 }
+W/ViewRootImpl( 1867): Cancelling event due to no window focus: MotionEvent { action=ACTION_CANCEL, actionButton=0, id[0]=0, x[0]=67.707726, y[0]=130.3286, toolType[0]=TOOL_TYPE_MOUSE, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1577143, downTime=1576503, deviceId=2, source=0x2002 }
+I/audio_hw_primary( 1199): choose pcmC0D0p for 0
+D/EmojiAltPhysicalKeyDetector( 1809): onKeyUp() : KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_UP, scanCode=103, metaState=0, flags=0x8, repeatCount=0, eventTime=1583598, downTime=1583540, deviceId=5, source=0x101 }
+D/EmojiAltPhysicalKeyDetector( 1809): onKeyUp() : Not Mapped: 19
+D/AudioFlinger( 1199): mixer(0xf45c0000) throttle end: throttle time(6)
+D/EmojiAltPhysicalKeyDetector( 1809): onKeyUp() : KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_UP, scanCode=103, metaState=0, flags=0x8, repeatCount=0, eventTime=1584937, downTime=1584801, deviceId=5, source=0x101 }
+D/EmojiAltPhysicalKeyDetector( 1809): onKeyUp() : Not Mapped: 19
+D/EmojiAltPhysicalKeyDetector( 1809): onKeyUp() : KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_DOWN, scanCode=108, metaState=0, flags=0x8, repeatCount=0, eventTime=1585560, downTime=1585436, deviceId=5, source=0x101 }
+D/EmojiAltPhysicalKeyDetector( 1809): onKeyUp() : Not Mapped: 20
+D/AudioFlinger( 1199): mixer(0xf45c0000) throttle end: throttle time(3)
+D/EmojiAltPhysicalKeyDetector( 1809): onKeyUp() : KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_DOWN, scanCode=108, metaState=0, flags=0x8, repeatCount=0, eventTime=1585966, downTime=1585869, deviceId=5, source=0x101 }
+D/EmojiAltPhysicalKeyDetector( 1809): onKeyUp() : Not Mapped: 20
+D/AudioFlinger( 1199): mixer(0xf45c0000) throttle end: throttle time(4)
+D/EmojiAltPhysicalKeyDetector( 1809): onKeyUp() : KeyEvent { action=ACTION_UP, keyCode=KEYCODE_DPAD_UP, scanCode=103, metaState=0, flags=0x8, repeatCount=0, eventTime=1586254, downTime=1586146, deviceId=5, source=0x101 }
+D/EmojiAltPhysicalKeyDetector( 1809): onKeyUp() : Not Mapped: 19
+I/audio_hw_primary( 1199): choose pcmC0D0p for 0
