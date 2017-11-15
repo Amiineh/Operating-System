@@ -13,7 +13,7 @@ typedef struct CpuStat{
 } cpuStat;
 
 void GetCpuInfo(FILE *file,cpuStat *cpu){
-    fscanf(file, "%d %d %d %d %d %d %d", &cpu->user, &cpu->nice, &cpu->system, &cpu->idle, &cpu->iowait, &cpu->irq, &cpu->softirq);
+    fscanf(file, "cpu  %d %d %d %d %d %d %d", &cpu->user, &cpu->nice, &cpu->system, &cpu->idle, &cpu->iowait, &cpu->irq, &cpu->softirq);
 }
 
 int main(){
@@ -27,6 +27,7 @@ int main(){
     while(1){   
         gettimeofday(&t1, 0);
         float diff = (t1.tv_sec - t0.tv_sec) * 1000.0f + (t1.tv_usec - t0.tv_usec) / 1000.0f;
+        FILE* statFile = fopen("/proc/stat", "r");
         if(diff >= TIME_INTERVAL_MS){
             GetCpuInfo(statFile, &cpu1);
             fclose(statFile);
@@ -34,12 +35,12 @@ int main(){
         }
     }
     
-    int real = (cpu1.user + cpu1.nice + cpu1.system) - (cpu0.user + cpu0.nice + cpu0.system);
-    int idle = (cpu1.idle + cpu1.iowait + cpu1.irq) - (cpu0.idle + cpu0.iowait + cpu0.irq);
+    int real = (cpu1.user + cpu1.nice + cpu1.system + cpu1.irq + cpu1.softirq) - (cpu0.user + cpu0.nice + cpu0.system + cpu0.irq + cpu0.softirq);
+    int idle = (cpu1.idle + cpu1.iowait) - (cpu0.idle + cpu0.iowait + cpu0.irq);
     
     float cpuUsage = (float)real * 100. / ((float)real + (float)idle);
     
-    printf("Total cpu usage by user in %d miliseconds: %.2f%%",TIME_INTERVAL_MS, cpuUsage);
+    printf("Total cpu usage by user in %d miliseconds: %.2f%%\n",TIME_INTERVAL_MS, cpuUsage);
     return 0;
 }
 
