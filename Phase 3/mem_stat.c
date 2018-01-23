@@ -11,20 +11,20 @@ int change_page_number=0;
 int thread_function(void* hichi){
 		struct task_struct * task;
 		for_each_process(task){
-			if(task->mm != NULL){
-				task_page_number[(int)task->pid] =(int)task->mm->total_vm;
+			if(task->mm != NULL){//it checks all of tasks even which terminated
+				task_page_number[(int)task->pid] =(int)task->mm->total_vm; //set the task_page_number with a variable that is all of the pages each process allocate at first
 			}
 		}
-		while(!kthread_should_stop()){
-			for_each_process(task){
+		while(!kthread_should_stop()){//returns the flag that indicates the thread should run or stop
+			for_each_process(task){//for on every process
 				if(task->mm != NULL){
-					if(task->mm->total_vm != task_page_number[(int)task->pid]){
-						change_page_number=(int)task->mm->total_vm - task_page_number[(int)task->pid];
+					if(task->mm->total_vm != task_page_number[(int)task->pid]){//if the number of task's pages had be changes
+						change_page_number=(int)task->mm->total_vm - task_page_number[(int)task->pid];//calculate the difference of task's pages
 						if(change_page_number > 0){		                
-								printk(KERN_INFO"%d pages are allocated by %d ", change_page_number, task->pid);
+								printk(KERN_INFO"%d pages are allocated by %d ", change_page_number, task->pid);//if it has more pages than first it has been sllocated
 						}
 						else{
-								printk(KERN_INFO"%d pages are released by %d" , -change_page_number, task->pid);
+								printk(KERN_INFO"%d pages are released by %d" , -change_page_number, task->pid);//if it has less tahn first it released some pages
 						}
 					}
 				}
@@ -36,7 +36,7 @@ int thread_function(void* hichi){
 
 int __init init_thread(void){
 	printk(KERN_INFO "creating thread\n");
-	thread_st =kthread_run(thread_function,NULL,"mythread");
+	thread_st =kthread_run(thread_function,NULL,"mythread");//create a thread and run
 	if(thread_st)
 		printk(KERN_INFO"Thread created successfully\n");
 	else
@@ -47,7 +47,7 @@ int __init init_thread(void){
 void __exit cleanup_thread(void){
 	printk(KERN_INFO "cleaning up\n");
 	if(thread_st){
-		kthread_stop(thread_st);
+		kthread_stop(thread_st);//kill the thread
 		printk(KERN_INFO "Thread stopped");
 	}
 }
